@@ -7,6 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://franciscopazf.github.io/',
-  base: '/',
+   site: 'https://franciscopazf.github.io',
+  base: '/', // IMPORTANTE en user site
 });

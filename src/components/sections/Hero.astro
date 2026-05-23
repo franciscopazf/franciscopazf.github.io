@@ -1,0 +1,29 @@
+---
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+---
+<section id="about" class="section">
+  <Container>
+    <div class="grid grid-cols-1 gap-6 items-center md:grid-cols-2">
+      <div>
+  <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Hola, soy Francisco  Paz — Programador de aplicaciones</h1>
+  <p class="mt-4 text-white/80 max-w-xl">¡Hola! Soy Francisco Paz, Ingeniero en Sistemas y apasionado por la programación y el desarrollo web. Me enfoco en crear soluciones que simplifiquen la vida de las personas mediante aplicaciones web eficientes.</p>
+        <div class="mt-4">
+          <div class="text-sm text-white/70">Choluteca — franciscojosafatpazflores@gmail.com — +504-93941156</div>
+        </div>
+        <div class="mt-6 flex gap-3">
+          <Button href="#projects">Ver proyectos</Button>
+          <Button variant="ghost" href="#contact">Contáctame</Button>
+        </div>
+
+        
+
+      </div>
+      <div class="hidden md:flex justify-center">
+        <div class="card-glass rounded-full p-4 bg-zinc-900 flex items-center justify-center">
+          <img src="https://avatars.githubusercontent.com/franciscopazf?s=400" alt="Foto de perfil" class="h-48 w-48 rounded-full object-cover border-2 border-white/6" onerror="this.onerror=null;this.src='/profile.jpg'" />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

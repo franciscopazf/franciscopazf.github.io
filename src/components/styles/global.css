@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root{
+  /* Zinc-like dark backgrounds */
+  --bg-1: #0b1220; /* zinc-900-ish */
+  --bg-2: #0f1724; /* zinc-800-ish */
+  /* Teal / blue-green accent */
+  --accent: #14b8a6; /* teal-500 */
+}
+
+
+
+/* glass card utility */
+.card-glass {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+}
+
+/* small helpers */
+.text-muted { color: rgba(255,255,255,0.7); }
+
+/* details toggle: hide truncated summary text when open and show full content */
+details summary { list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary .summary-text { display: inline; }
+details[open] summary .summary-text { display: none; }
+details .full-content { display: none; }
+details[open] .full-content { display: block; }
+details .ver-menos { margin-top: 0.5rem; display: inline-flex; padding: 0.25rem 0.5rem; border-radius: 6px; background: rgba(255,255,255,0.03); color: var(--accent); font-size: 0.875rem; border: 1px solid rgba(255,255,255,0.04); }
+
+/* responsive spacing for sections: slightly smaller and uniform */
+.section { padding: 2rem 0; }
+@media (min-width: 640px) { .section { padding: 3rem 0; } }

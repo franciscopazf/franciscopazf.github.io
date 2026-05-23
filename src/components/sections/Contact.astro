@@ -1,0 +1,28 @@
+---
+import Container from "../ui/Container.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import Button from "../ui/Button.astro";
+---
+<section id="contact" class="section">
+  <Container>
+    <SectionTitle title="Contacto" subtitle="Ponte en contacto" />
+    <div class="mt-4 grid gap-6 md:grid-cols-2">
+      <div class="card-glass rounded-2xl p-6 bg-zinc-800">
+        <h4 class="font-semibold">Colaboremos</h4>
+        <p class="mt-2 text-white/80">Estoy abierto a trabajos freelance y puestos a tiempo completo. Escríbeme para consultas de proyectos o para una charla rápida.</p>
+        <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:gap-3 gap-2">
+          <Button href="mailto:franciscojosafatpazflores@gmail.com">Enviar correo</Button>
+        </div>
+      </div>
+      <div class="card-glass rounded-2xl p-6 bg-zinc-800">
+        <h4 class="font-semibold">Redes</h4>
+        <ul class="mt-3 space-y-2 text-sm text-white/70">
+          <li><a href="https://github.com/franciscopazf" target="_blank" class="hover:text-white">GitHub — github.com/franciscopazf</a></li>
+          <li><a href="https://www.linkedin.com/in/franciscopazf/" target="_blank" class="hover:text-white">LinkedIn — linkedin.com/in/franciscopazf</a></li>
+          <li><a href="mailto:franciscojosafatpazflores@gmail.com" class="hover:text-white">Correo — franciscojosafatpazflores@gmail.com</a></li>
+          <li class="text-white/70">Teléfono — +504 9394-1156</li>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</section>

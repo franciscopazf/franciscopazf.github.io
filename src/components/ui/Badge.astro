@@ -1,0 +1,10 @@
+---
+export interface Props {
+  variant?: 'default' | 'blue';
+}
+const { variant = 'default' } = Astro.props as Props;
+let classes = 'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm transition-colors';
+if (variant === 'default') classes += ' bg-white/6 text-white/90 border border-white/6';
+if (variant === 'blue') classes += ' bg-gradient-to-r from-[color:var(--accent)] to-[color:var(--accent)]/70 text-white';
+---
+<span class={classes}><slot /></span>

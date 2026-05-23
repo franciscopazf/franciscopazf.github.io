@@ -1,0 +1,24 @@
+He creado un HTML con tu CV: `public/CurriculumFranciscoPaz.html`.
+
+Opciones para publicar/descargar como PDF:
+
+1) Si ya tienes el PDF listo:
+	- Sube el archivo con nombre `CurriculumFranciscoPaz.pdf` a `public/`.
+	- Ruta: `public/CurriculumFranciscoPaz.pdf`.
+
+2) Generar PDF localmente desde el HTML (recomendado):
+	- Con Google Chrome/Chromium instalado, ejecuta:
+
+```bash
+chromium --headless --disable-gpu --print-to-pdf=public/CurriculumFranciscoPaz.pdf public/CurriculumFranciscoPaz.html
+```
+
+	- O con `google-chrome`:
+
+```bash
+google-chrome --headless --disable-gpu --print-to-pdf=public/CurriculumFranciscoPaz.pdf public/CurriculumFranciscoPaz.html
+```
+
+3) Si quieres, puedo generar el PDF yo y añadirlo al repo; dime si quieres que lo haga.
+
+Nota: revisa `public/CurriculumFranciscoPaz.html` y edita cualquier texto antes de generar el PDF final.

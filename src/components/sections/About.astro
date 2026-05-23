@@ -1,0 +1,33 @@
+---
+import Container from "../ui/Container.astro";
+import Card from "../ui/Card.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+---
+<section id="about" class="section">
+  <Container>
+  <SectionTitle title="Sobre mí" subtitle="Quién soy y qué hago" />
+  <Card class="grid gap-4 md:grid-cols-2 bg-zinc-800">
+      <div>
+  <p class="text-white/80">Soy desarrollador de software especializado en construir experiencias digitales excepcionales. Actualmente enfocado en crear SPA accesibles y de alto rendimiento con Angular y TypeScript. Disfruto diseñando sistemas de componentes reutilizables y mejorando flujos de trabajo de desarrollo.</p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>• Component-driven development</li>
+          <li>• Performance optimizations</li>
+          <li>• Clean, maintainable code</li>
+        </ul>
+      </div>
+      <div>
+  <h3 class="text-sm font-semibold text-white/90">Datos rápidos</h3>
+        <dl class="mt-3 text-sm text-white/70 space-y-2">
+          <div>
+            <dt class="font-medium">Ubicación</dt>
+            <dd>Remoto / España</dd>
+          </div>
+          <div>
+            <dt class="font-medium">Disponibilidad</dt>
+            <dd>Abierto a oportunidades</dd>
+          </div>
+        </dl>
+      </div>
+    </Card>
+  </Container>
+</section>

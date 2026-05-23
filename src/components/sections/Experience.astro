@@ -1,0 +1,60 @@
+---
+import Container from "../ui/Container.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import { experience } from "../../data/experience";
+---
+<section id="experience" class="section">
+  <Container>
+  <SectionTitle title="Experiencia" subtitle="Dónde he trabajado" />
+    <div class="mt-6 space-y-6">
+      {experience.map((item) => (
+        <article class="relative pl-6">
+          <div class="absolute left-0 top-1 w-2 h-2 rounded-full" style="background:var(--accent)" />
+          <div class="ml-4">
+            <h4 class="font-semibold">{item.role} <span class="text-white/60 font-normal">@ {item.company}</span></h4>
+            <div class="text-sm text-white/70">{item.start} — {item.end ?? 'Presente'}</div>
+            {item.description ? (
+              <div class="mt-2 text-white/80">
+                {item.description.length > 140 ? (
+                  <details class="text-sm">
+                    <summary class="cursor-pointer">
+                      <span class="summary-text">{item.description.slice(0,140)}... <span class="text-[color:var(--accent)]">ver más</span></span>
+                    </summary>
+                    <div class="full-content mt-2">
+                      <p>{item.description}</p>
+                      <button class="ver-menos" type="button">Ver menos</button>
+                    </div>
+                  </details>
+                ) : (
+                  <p class="text-sm">{item.description}</p>
+                )}
+              </div>
+            ) : null}
+          </div>
+        </article>
+      ))}
+    </div>
+  </Container>
+  <script>
+    // Attach handlers to close details when clicking "Ver menos"
+    document.addEventListener('click', function (e) {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      const btn = target.closest('.ver-menos');
+      if (btn) {
+        const details = btn.closest('details');
+        if (details) details.removeAttribute('open');
+      }
+    });
+    // Sync summary-text visibility with details open state to avoid duplicate text
+    document.querySelectorAll('details').forEach((d) => {
+      d.addEventListener('toggle', () => {
+        const s = d.querySelector('.summary-text');
+        if (s instanceof HTMLElement) {
+          if (d.open) s.style.display = 'none';
+          else s.style.display = '';
+        }
+      });
+    });
+  </script>
+</section>

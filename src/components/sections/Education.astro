@@ -1,0 +1,19 @@
+---
+import Container from "../ui/Container.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import { education } from "../../data/education";
+---
+<section id="education" class="section">
+  <Container>
+  <SectionTitle title="Educación" subtitle="Formación" />
+    <div class="mt-6 space-y-4">
+      {education.map((e) => (
+        <div class="card-glass rounded-2xl p-4 bg-zinc-800">
+          <h4 class="font-semibold">{e.degree} <span class="text-white/60 font-normal">@ {e.institution}</span></h4>
+          <div class="text-sm text-white/70">{e.start} — {e.end ?? 'Presente'}</div>
+          {e.details ? <p class="mt-2 text-white/80">{e.details}</p> : null}
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

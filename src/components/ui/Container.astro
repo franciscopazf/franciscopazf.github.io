@@ -1,0 +1,9 @@
+---
+export interface Props {
+  max?: string;
+}
+const { max = 'max-w-5xl' } = Astro.props as Props;
+---
+<div class={`mx-auto px-4 sm:px-6 ${max}`}>
+  <slot />
+</div>

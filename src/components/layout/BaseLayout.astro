@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>html{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}</style>
+    <slot name="head" />
+  </head>
+  <body class="bg-zinc-900 text-white antialiased">
+    <header class="sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-sm border-b border-white/6">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 flex items-center justify-between py-4">
+        <div class="text-xl font-semibold">Portafolio</div>
+        <div class="flex items-center gap-4">
+          <nav class="space-x-4 text-sm text-white/80 hidden sm:flex">
+            <a href="#about" class="hover:text-white transition">Sobre mí</a>
+            <a href="#projects" class="hover:text-white transition">Proyectos</a>
+            <a href="#contact" class="hover:text-white transition">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="mt-16 py-8 border-t border-white/6">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 text-sm text-white/60">
+        © 2026 — Construido con Astro + Tailwind
+        <div class="mt-2">Francisco Josafat Paz Flores</div>
+      </div>
+    </footer>
+  </body>
+</html>
